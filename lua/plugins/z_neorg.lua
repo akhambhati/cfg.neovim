@@ -4,18 +4,22 @@ return {
         build = ":Neorg sync-parsers",
         opts = {
             load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.norg.dirman"] = { -- Manages Neorg workspaces
-                config = {
-                    workspaces = {
-                        holocron = "~/holocron",
+                ["core.defaults"] = {}, 
+                ["core.norg.concealer"] = {
+                    config = {
+                        icon_preset = "diamond",
                     },
-                    default_workspace = "holocron",
+                },
+                ["core.norg.dirman"] = {
+                    config = {
+                        workspaces = {
+                            holocron = "~/holocron",
+                        },
+                        default_workspace = "holocron",
+                    },
                 },
             },
         },
-    },
-    dependencies = { { "nvim-lua/plenary.nvim" } },
-}
+        dependencies = { { "nvim-lua/plenary.nvim" } },
+    }
 }
