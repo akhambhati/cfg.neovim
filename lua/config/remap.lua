@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocaleader = ","
+vim.keymap.set("n", "<leader>w", vim.cmd.write)
+vim.keymap.set("n", "<leader>q", vim.cmd.Bdelete)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -37,4 +39,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
+end)
+
+vim.keymap.set("n", "<leader>h", function()
+    vim.cmd("Neorg workspace")
+    vim.cmd("Neorg index")
 end)
