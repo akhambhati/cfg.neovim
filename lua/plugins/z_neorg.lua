@@ -9,8 +9,9 @@ return {
                 ["core.norg.dirman"] = { -- Manages Neorg workspaces
                 config = {
                     workspaces = {
-                        notes = "~/holocron",
+                        holocron = "~/holocron",
                     },
+                    default_workspace = "holocron",
                 },
             },
         },
